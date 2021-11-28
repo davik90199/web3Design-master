@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <link rel="stylesheet" href="Registrarse.css">
+    <link rel="stylesheet" href="Registros.php">
+    <link rel="stylesheet" href="Base_de_Datos.php">
 </head>
 <body>
     <DIv class="contenedor">
@@ -14,32 +16,33 @@
         </div>
         
        <h1 class="cuenta">!Create una cuenta¡</h1>
-        <form action="Base_de_Datos.php" method="post" class="formulario2">
+        <form method="post" class="formulario2">
             <!--Nombre-->
             <label for="Username">Nombre</label>
-            <input type="text" placeholder="Ingrese su nombre" required>
+            <input type="text" name="Nombre" placeholder="Ingrese su nombre" required>
 
             <!--Primer Apellido-->
             <label for="Username">Primer Apellido</label>
-            <input type="text" placeholder="Ingrese su Apellido"required>
+            <input type="text" name="Primer Apellido" placeholder="Ingrese su Apellido"required>
 
             <!--Segundo Apellido-->
             <label for="Username">Segundo Apellido</label>
-            <input type="text" placeholder="Ingrese su Apellido">
+            <input type="text" name="Segundo Apellido" placeholder="Ingrese su Apellido">
 
             <!--Username-->
             <label for="Username">Usuario</label>
-            <input type="text" placeholder="Ingrese usuario" required>
+            <input type="text" name="Usuario" placeholder="Ingrese usuario" required>
 
              <!--Password-->
              <label for="Username">Contraseña</label>
-             <input type="text" placeholder="Ingrese contraseña" required>
+             <input type="text" name="Contraseña" placeholder="Ingrese contraseña" required>
 
-             <input class="boton" type="submit" value="Registrarse">
-             <input class="boton" type="submit" value="limpiar">
+             <input class="boton" type="submit" name="Registrarse" value="Registrarse">
+             <input class="boton" type="submit" name="clear" value="limpiar">
 
              <a href="Login.html">Atras</a>
         </form>
+       
     </DIv>
 </body>
 </html>
