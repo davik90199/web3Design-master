@@ -1,59 +1,28 @@
 <?php
 
-include ("Base_de_Datos.php");
+//validamos datos del servidor
+$user = "root";
+$pass = "";
+$host = "localhost";
+$bddatos = "3desing";
 
-if(isset($_POST['Registrarse']))
-{
-    
-    if(strlen($_POST['Nombre']) <= 1 && 
-    strlen($_POST['Primer Apellido']) <= 1 && 
-    strlen($_POST['Segundo Apellido']) <= 1 &&  
-    strlen($_POST['Usuario']) <= 1 && 
-    strlen($_POST['Contraseña']) <= 1 && 
-    strlen($_POST['Clear']) <= 1){
-        
-        $Nombre= $_POST['Nombre'];
-        $PrimerApellido= $_POST['Primer Apellido'];
-        $SegundoApellido= $_POST['Segundo Apellido']; 
-        $Usuario= $_POST['Usuario'];
-        $Contraseña= $_POST['Contraseña'];
-        $Consulta= "INSERT INTO `login`( `Nombre`, `PrimerApellido`, 
-        `SegundoApellido`, `Usuario`, `Contraseña`) 
-        VALUES ('$Nombre','$PrimerApellido',' $SegundoApellido','$Usuario','$Contraseña')";
-        $resultados= mysqli_query($connection, $Consulta);
+//conetamos al base datos
+$connection = mysqli_connect($host, $user, $pass, $bddatos)
+or die ("error al conectar con la base de datos");
 
-        if($resultados)
-        {
-            ?>
-            <h2 class="aviso">Se a Registrado correctamente</h2>
-            <?php
-        }
-        else{
-            ?>
-            <h2 class="aviso">No sea Registrado correctamente</h2>
-            <?php
-        }
-    }
-    else{
-        ?>
-        <h2 class="aviso">Por favor complete los campos</h2>
-        <?php
-    }
-}
+$Id_usuario= $_POST['Id_usuario'];
+$Nombre= $_POST['Nombre'];
+$PrimerApellido= $_POST['PrimerApellido'];
+$SegundoApellido= $_POST['SegundoApellido']; 
+$Usuario= $_POST['Usuario'];
+$Contraseña= $_POST['Contraseña'];
+$Consulta= "INSERT INTO  `login` VALUES ('$Id_usuario', '$Nombre','$PrimerApellido','$SegundoApellido','$Usuario','$Contraseña')";
 
-if(isset($_POST['Clear']))
-{
-    if(strlen($_POST['Nombre']) <= 1 && 
-    strlen($_POST['Primer Apellido']) <= 1 && 
-    strlen($_POST['Segundo Apellido']) <= 1 &&  
-    strlen($_POST['Usuario']) <= 1)
-    {
-        $Nombre= "";
-        $PrimerApellido= "";
-        $SegundoApellido= ""; 
-        $Usuario= "";
-        $Contraseña= "";
-    }
-}
+$resultados= mysqli_query($connection, $Consulta)
+or die ("error al conectar con la tabla");
+
+mysqli_close($connection);
+
+echo ("Los datos se registraron correctamente");
 
 ?>

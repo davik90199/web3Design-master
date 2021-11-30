@@ -9,7 +9,7 @@
   .contenedor{
       background-color: #3f2817;
       width: 320px;
-      height: 670px;
+      height: 695px;
       color: #fff;
       position: absolute;
       border: 2px solid #c0c0c0;
@@ -30,7 +30,7 @@
         left: calc(50% - 65px);
   }
 
-    .aviso{
+  .contenedor .aviso{
         margin: 0;
         padding: 0 0 30px;
         text-align: center;
@@ -89,6 +89,7 @@
     border:none;
     outline: none;
     height: 40px;
+    width: 120px;
     background-color: #d8a200;
     color: #fff;
     font-size: 20px;
