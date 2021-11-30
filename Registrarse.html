@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <link rel="stylesheet" href="Registrarse.css">
-    <link rel="stylesheet" href="Registros.php">
-    <link rel="stylesheet" href="Base_de_Datos.php">
+    
 </head>
 <body>
     <DIv class="contenedor">
@@ -16,18 +15,22 @@
         </div>
         
        <h1 class="cuenta">!Create una cuenta¡</h1>
-        <form method="post" class="formulario2">
+        <form action="Registrar.php"method="POST" class="formulario2">
+            <!--IdeUsuario-->
+            <label for="Username">Id_usuario</label>
+            <input type="text" name="Id_usuario" placeholder="Ingrese su Id" required>
+
             <!--Nombre-->
             <label for="Username">Nombre</label>
             <input type="text" name="Nombre" placeholder="Ingrese su nombre" required>
 
             <!--Primer Apellido-->
             <label for="Username">Primer Apellido</label>
-            <input type="text" name="Primer Apellido" placeholder="Ingrese su Apellido"required>
+            <input type="text" name="PrimerApellido" placeholder="Ingrese su Apellido"required>
 
             <!--Segundo Apellido-->
             <label for="Username">Segundo Apellido</label>
-            <input type="text" name="Segundo Apellido" placeholder="Ingrese su Apellido">
+            <input type="text" name="SegundoApellido" placeholder="Ingrese su Apellido">
 
             <!--Username-->
             <label for="Username">Usuario</label>
@@ -37,9 +40,10 @@
              <label for="Username">Contraseña</label>
              <input type="text" name="Contraseña" placeholder="Ingrese contraseña" required>
 
-             <input class="boton" type="submit" name="Registrarse" value="Registrarse">
-             <input class="boton" type="submit" name="clear" value="limpiar">
-
+             <button class="boton" type="submit" name="Registrarse">Registrarse</button>
+             <button class="boton" type="submit" name="Limpiar">Limpiar</button>
+            <br>
+            <br>
              <a href="Login.html">Atras</a>
         </form>
        
