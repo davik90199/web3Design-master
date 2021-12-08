@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="Registrarse.css">
 <?php
 
 $Usuario= $_POST['Usuario'];
@@ -8,7 +9,7 @@ $_SESSION['Usuario']=$Usuario;
 $connection = mysqli_connect($host, $user, $pass, $bddatos);
 $Consulta="SELECT*FROM usuario='$Usuario' and contraseña='$Contraseña'";
 
-$resultados= mysqli_query($connection, $Consultas);
+$resultados= mysqli_query($connection, $Consulta);
 $filas= mysqli_num_rows($resultados);
 
 if($filas){
@@ -18,8 +19,11 @@ if($filas){
     <?php
     include("login.html");
     ?>
-    <h1 class=""> ERROR EN LA AUTENTICACIÓN</h1>
+    <h1 class="aviso"> ERROR EN LA AUTENTICACIÓN</h1>
     <?php
 }
+?>
+ <a class="links" href="Login.html">Atras</a>
+<?php
 mysqli_free_result($resultados);
 mysqli_close($connection);

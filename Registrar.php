@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="Registrarse.css">
 <?php
 
 //validamos datos del servidor
@@ -23,6 +24,16 @@ or die ("error al conectar con la tabla");
 
 mysqli_close($connection);
 
-echo ("Los datos se registraron correctamente");
+?>
+<div class="contenedor1"> 
+
+<form action="login.html" method="post" class="formulario3">
+<h1 class="aviso">Los datos se registraron correctamente</h1>
+
+<button class="boton" type="submit" name="Atras">Atras</button>
+</form>
+
+</div>
+<?php
 
 ?>
