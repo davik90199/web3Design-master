@@ -1,32 +1,57 @@
+/*Comienzo de la pagina*/
+
+/* margenes de documento*/
 *{
   margin: 0;
   padding: 0;
 }
 
+/*fondo de la pagina*/
 #Fondo{
   margin: 0;
   padding: 0;
-  width: 1349px;
-  height: 768px;
+  width: 1349px; /*Ancho*/
+  height: 768px;/*Alto*/
   display: flex;
   flex-direction: column;
   align-items: center;/*Alinea en eje y */
   justify-content: flex-start;/*Alinea en eje x */
+  
+  }
+  @media (min-width: 768px) and (max-width: 768px){
 
-}
-.Desing{
+    #Fondo{
+  margin: 0;
+  padding: 0;
+  width: 1024px; /*Ancho*/
+  height: 768px;/*Alto*/
+  background: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;/*Alinea en eje y */
+  justify-content: flex-start;/*Alinea en eje x */
+  
+  }
+
+  }
+
+
+  /*banner superior color cafe*/
+   .Desing{
     top: 0;
     left: 0;
  display: flex;
     align-items: flex-start;
-  width: 1349px;
-  height: 80px;
+  width: 1349px;/*Ancho*/
+  height: 80px;/*Alto*/
   margin: 0px;
   padding: 0px;
   background-image: url("Imagenes y videos/Banner_3Desing.png");
   background-size: 1349px 80px;
   background-repeat: no-repeat;
   }
+
+  /*distribucion del logo banner*/
   .logo_cab{
     margin: 5px;
     margin-left: 80px;
@@ -37,22 +62,29 @@
     width: 70px;
     height: 70px;
   }
+  
+   /*tamaño del logo banner*/
   .logoc{
     
     width: 70px;
     height: 70px;
   }
+
+  /*Barra de navegacion*/
   .bar{
   width: 100px;
   height: 60px;
   }
+
+  /*Espacio entre cada enlace*/
   .menu{
     margin-top: 10px;
-  width: 1349px;
-  height: 60px;
+    width: 1349px;
+    height: 60px;
 
   }
 
+  /*lista de navegacion 1*/
   ul{
 
     list-style-type: none;
@@ -60,6 +92,7 @@
     padding: 0px;
   }
 
+  /*enlaces de navegacion*/
   li a{
   float: left;
   color: white;
@@ -67,13 +100,20 @@
   text-decoration: none;
   font-size: 20px;
   font-family: Rashkey, arial;
-  
 }
+
+/*efectos de enlace de navegacion*/
 li a:hover{
     color: #efb810;
     transition: ease-in;
-   }
+}
 
+/*Final de la barra de navegacion de pagina*/
+
+/*contenido de pagina*/
+
+
+/*estilo del titulo Home del index.html*/
    p{
     text-align: center;
     font-size: 35px;
@@ -82,21 +122,24 @@ li a:hover{
     margin-bottom:20px;
    }
 
+  /*transicion de color del titulo Home del index.html*/
+
    p:hover{
     color: #efb810;
     transition: ease-in;
    }
 
-
+/*borde negro tipo cuadro*/
 .imagen{
   margin: 30px;
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 506px;
+  height: 506px;
   border: 3px solid #0a0a0a;
   border-radius: 5px;
   }
 
+  /*barra de desplazamiento*/
   .slider{
     width: 500px;
     height: 500px;
@@ -104,6 +147,7 @@ li a:hover{
     overflow: hidden;
   }
 
+  /*tamaño de la barra de desplazamiento*/
   .sliders{
     width: 600%;
     height: 500px;
@@ -111,18 +155,23 @@ li a:hover{
    
   }
 
+  /*entrada del slider*/
   .sliders input{
     display: none;
   }
 
+  /*efecto de transicion del slider de desplazamiento*/
   .slide{
     width: 20%;
     transition: 2s;
   }
+
+  /* tamaño de cada imagen en la barra de desplazamiento*/
   .slide img{
     width: 500px;
     height:500px;
   }
+
 
   /*navegacion manual*/
 
@@ -134,6 +183,8 @@ li a:hover{
     justify-content: center;
   }
 
+
+  /* efecto de click sostenido*/
   .manual-btn{
     border: 2px solid #40d3dc;
     padding: 5px;
@@ -141,12 +192,18 @@ li a:hover{
     cursor: pointer;
     transition: 1s;
   }
+  
+/* distribucion de los botones */
   .manual-btn:not(:last-child){
     margin-right: 40px;
   }
+
+  /*efecto cambio de color*/
   .manual-btn:hover{
     background: #40d3dc; 
   }
+
+  /* cambio de imagen*/
 
   #radio1:checked ~ .first{
     margin-left: 0;
@@ -167,6 +224,7 @@ li a:hover{
     margin-left: -102.2%;
   }
 
+
   /*navegacion automatica*/
 
   .naveg-auto{
@@ -177,6 +235,7 @@ li a:hover{
     justify-content: center;
   }
 
+  /*botones de color azul automaticamente*/
    .naveg-auto div{
     border: 2px solid #40d3dc;
     padding: 5px;
@@ -185,10 +244,13 @@ li a:hover{
     transition: 1s;
   }
 
+
+  /* distribucion de los botones */
    .naveg-auto div:not(:last-child){
     margin-right: 40px;
   }
 
+  /*color azul en los radio boton automaticamente*/
   #radio1:checked ~ .naveg-auto .auto-btn1{
     background: #40d3dc;
   }
@@ -213,31 +275,43 @@ li a:hover{
     background: #40d3dc;
   }
 
+/*imagen de pie de pagina*/
   .imagen img{
   
   width: 100%;
   height: 100%; /*Proporcion de imagenes*/
 
   }
+
+
+  /*Comienzo del pie de pagina*/
+
+
+  /*pie de pagina fondo imagen*/
   .pie{
     
     display: flex;
-  align-items: center;
-  width: 1349px;
-  height: 196px;
+    align-items: center;
+    width: 1349px;
+    height: 196px;
     border-radius: 5px;
     background-image: url("Imagenes y videos/azul_ocuro.jpg");
     background-size: 1349px 500px;
     background-repeat: no-repeat;
   }
+
+
+  /* espacio del logo pie de pagina*/
   .fondo_pie{
     display: flex;
   align-items: center;
   flex-wrap: wrap;
   width: 650px;
   height: 196px;
-   
   }
+
+
+/* imagen del logo pie de pagina*/
   .fondo_pie {
     display: flex;
   align-items: center;
@@ -246,6 +320,8 @@ li a:hover{
   min-width: 250px;
   
   }
+
+  /* alinear la imagen logo pie de pagina*/
   .logo_pie{
     margin: 5px;
     margin-left: 50px;
@@ -257,10 +333,14 @@ li a:hover{
   height: 180px;
     
   }
+
+  /* temaño del logo pie de pagina*/
   .logo {
     width: 200px;
   height: 175px;
   }
+
+  /* logo de whatsapp*/
   .fwht{
     display: flex;
     width: 40px;
@@ -268,6 +348,9 @@ li a:hover{
     align-self: center;
     padding: 5px;
   }
+
+
+  /*logo de email correo electronico*/
   .femail{
     display: flex;
     width: 40px;
@@ -276,6 +359,8 @@ li a:hover{
     padding: 5px;
     margin: 15px;
   }
+
+  /* tamaño de texto pie de pagina*/
   .pie h2{
     line-height: 35px;
    display: flex;
@@ -285,6 +370,7 @@ li a:hover{
    color: white;
   }
 
+  /* distribucion del texto pie de pagina*/
   .info{
     position: relative;
     display: flex;
