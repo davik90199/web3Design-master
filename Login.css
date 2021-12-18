@@ -1,3 +1,4 @@
+/*marenes cero para la pagina*/
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +7,8 @@
       background: #fff;
       font-family: Arial, Helvetica, sans-serif;
   }
-  <!--contenedorlogin-->
+  
+  /*contenedorlogin*/
 
   .div_login{
       background-color: #3f2817;
@@ -22,6 +24,7 @@
       transform: translate(-50%, -50%);
       padding: 70px 30px;
   }
+   /*circulo del login*/
   .div_login .circulo{
 
         border-radius: 100px;
@@ -31,7 +34,7 @@
         top: 1px;
         left: calc(50% - 65px);
   }
-
+   /*contenedorlogin*/
   .div_login .login{
         margin: 0;
         padding: 0 0 30px;
@@ -41,7 +44,7 @@
         top: 130px;
         left: calc(50% - 50px);
   }
-
+ /*formulario del login*/
   .div_login .formulario{
     width: 320px;
     height: 320px;
@@ -49,13 +52,15 @@
    top: 160px;
     left: calc(10% - 10px)
   }
+
+    /*texto del formulario del login*/
     .div_login label{
     margin: 0;
     padding: 0 0 20px;
     font-weight: bold;
     display: block;
 }
-
+/*logo de 3desing en el login*/
   .div_login .Logo{
       width: 100px;
       height: 100px;
@@ -63,11 +68,12 @@
       top: 25px;
       left: calc(50% - 50px);
   }
-
+   /*entradas del login*/
   .div_login input{
     width: 100%;
     margin-bottom: 20px;
 }
+ /*Entradas de la contraseña en el login*/
 .div_login input[type="text"], .div_login input[type="password"]
 {
     border:none;
@@ -78,7 +84,7 @@
     color: #fff;
     font-size: 20px;
 }
-
+/*botones en el login*/
 .div_login .boton[type="submit"]
 {
     border:none;
@@ -90,6 +96,7 @@
     border-radius: 20px;
 }
 
+/*efecto para los botones en el login*/
 .div_login .boton:hover[type="submit"]
 {
     border:none;
@@ -101,7 +108,7 @@
     border-radius: 20px;
 }
 
-
+/*enlaces en el login*/
 .div_login a
 {
     text-decoration: none;
@@ -109,6 +116,8 @@
     line-height: 20px;
     color: #000;
 }
+
+/*efecto de hover enlaces en el login*/
 .div_login a:hover
 {
     
